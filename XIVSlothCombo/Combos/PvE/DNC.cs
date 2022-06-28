@@ -55,6 +55,7 @@ namespace XIVSlothCombo.Combos.PvE
                 FlourishingWindmill = 1816,
                 FlourishingShower = 1817,
                 StandardStep = 1818,
+                StandardFinish = 1821,
                 TechnicalStep = 1819,
                 ShieldSamba = 1826,
                 SilkenSymmetry = 2693,
@@ -479,7 +480,7 @@ namespace XIVSlothCombo.Combos.PvE
                         return All.HeadGraze;
 
                 // Simple ST Standard (activates dance with no target, or when target is over HP% threshold)
-                if (!HasTarget() || GetTargetHPPercent() > standardStepBurstThreshold)
+                if ((!HasEffect(Buffs.StandardFinish) || GetBuffRemainingTime(Buffs.StandardFinish) <= 10) && (!HasTarget() || GetTargetHPPercent() > standardStepBurstThreshold))
                 {
                     if (level >= Levels.StandardStep && IsEnabled(CustomComboPreset.DNC_ST_Simple_SS) && IsOffCooldown(StandardStep)
                         && ((!HasEffect(Buffs.TechnicalStep) && !techBurst) || techBurstTimer > 5))
@@ -620,7 +621,7 @@ namespace XIVSlothCombo.Combos.PvE
                         return All.HeadGraze;
 
                     // Simple AoE Standard (activates dance with no target, or when target is over HP% threshold)
-                    if (!HasTarget() || GetTargetHPPercent() > standardStepBurstThreshold)
+                    if ((!HasEffect(Buffs.StandardFinish) || GetBuffRemainingTime(Buffs.StandardFinish) <= 10) && (!HasTarget() || GetTargetHPPercent() > standardStepBurstThreshold))
                     {
                         if (level >= Levels.StandardStep && IsEnabled(CustomComboPreset.DNC_AoE_Simple_SS) && IsOffCooldown(StandardStep)
                             && ((!HasEffect(Buffs.TechnicalStep) && !techBurst) || techBurstTimer > 5))

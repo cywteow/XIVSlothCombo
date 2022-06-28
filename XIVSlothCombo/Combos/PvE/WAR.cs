@@ -211,7 +211,7 @@ namespace XIVSlothCombo.Combos.PvE
                     {
                         if (CanWeave(actionID))
                         {
-                            if (IsEnabled(CustomComboPreset.WAR_AoE_Overpower_InnerRelease) && CanDelayedWeave(actionID) && IsOffCooldown(OriginalHook(Berserk)) && level >= Levels.Berserk)
+                            if (CanDelayedWeave(actionID) && IsOffCooldown(OriginalHook(Berserk)) && level >= Levels.Berserk)
                                 return OriginalHook(Berserk);
                             if (IsEnabled(CustomComboPreset.WAR_AoE_Overpower_Orogeny) && IsOffCooldown(Orogeny) && level >= Levels.Orogeny && HasEffect(Buffs.SurgingTempest))
                                 return Orogeny;
