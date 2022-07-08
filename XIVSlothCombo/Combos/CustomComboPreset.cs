@@ -416,52 +416,52 @@ namespace XIVSlothCombo.Combos
 
         [BlueInactive(BLU.SongOfTorment, BLU.Bristle)]
         [ReplaceSkill(BLU.SongOfTorment)]
-        [CustomComboInfo("Buffed Song of Torment", "Turns Song of Torment into Bristle so SoT is buffed. \nSpells Required: Song of Torment.", BLU.JobID)]
+        [CustomComboInfo("Buffed Song of Torment", "Turns Song of Torment into Bristle so Song of Torment is buffed.", BLU.JobID)]
         BLU_BuffedSoT = 70000,
 
         [BlueInactive(BLU.Whistle, BLU.Tingle, BLU.MoonFlute, BLU.JKick, BLU.TripleTrident, BLU.Nightbloom, BLU.RoseOfDestruction, BLU.FeatherRain, BLU.Bristle, BLU.GlassDance, BLU.Surpanakha, BLU.MatraMagic, BLU.ShockStrike, BLU.PhantomFlurry)]
         [ReplaceSkill(BLU.MoonFlute)]
-        [CustomComboInfo("Moon Flute Opener", "Puts the Full Moon Flute Opener on Moon Flute or Whistle. \nSpells Required: Whistle, Tingle, Moon Flute, J Kick, Triple Trident, Nightbloom, Rose of Destruction, Feather Rain, Bristle, Glass Dance, Surpanakha, Matra Magic, Shock Strike, Phantom Flurry.", BLU.JobID)]
+        [CustomComboInfo("Moon Flute Opener", "Puts the Full Moon Flute Opener on Moon Flute or Whistle.", BLU.JobID)]
         BLU_Opener = 70001,
 
         [BlueInactive(BLU.MoonFlute, BLU.Tingle, BLU.ShockStrike, BLU.Whistle, BLU.FinalSting)]
         [ReplaceSkill(BLU.FinalSting)]
-        [CustomComboInfo("Final Sting Combo", "Turns Final Sting into the buff combo of: Moon Flute, Tingle, Whistle, Final Sting. Will use any primals off CD before casting Final Sting. \nSpells Required: Moon Flute, Tingle, Whistle, Final Sting", BLU.JobID)]
+        [CustomComboInfo("Final Sting Combo", "Turns Final Sting into the buff combo of: Moon Flute, Tingle, Whistle, Final Sting. Will use any primals off CD before casting Final Sting.", BLU.JobID)]
         BLU_FinalSting = 70002,
 
         [BlueInactive(BLU.RoseOfDestruction, BLU.FeatherRain, BLU.GlassDance, BLU.JKick)]
         [ParentCombo(BLU_FinalSting)]
-        [CustomComboInfo("Off CD Primal Additions", "Adds any Primals that are off CD to the Final Sting Combo. \nPrimals Used: Feather Rain, Shock Strike, Glass Dance, J Kick, Rose of Destruction. ", BLU.JobID)]
+        [CustomComboInfo("Off CD Primal Additions", "Adds any Primals that are off CD to the Final Sting Combo.", BLU.JobID)]
         BLU_Primals = 70003,
 
         [BlueInactive(BLU.RamsVoice, BLU.Ultravibration)]
         [ReplaceSkill(BLU.Ultravibration)]
-        [CustomComboInfo("Ram's Voice into Ultravibration", "Turns Ultravibration into Ram's Voice if Deep Freeze isn't on the target. Will swiftcast Ultravibration if available. \nSpells Required: Ram's Voice, Ultravibration. ", BLU.JobID)]
+        [CustomComboInfo("Ram's Voice into Ultravibration", "Turns Ultravibration into Ram's Voice if Deep Freeze isn't on the target. Will swiftcast Ultravibration if available.", BLU.JobID)]
         BLU_Ultravibrate = 70005,
 
         [BlueInactive(BLU.Offguard, BLU.BadBreath, BLU.Devour)]
         [ReplaceSkill(BLU.Devour, BLU.Offguard, BLU.BadBreath)]
-        [CustomComboInfo("Tank Debuff Feature", "Puts Devour, Off-Guard, Lucid Dreaming, and Bad Breath into one button when under Tank Mimicry. \nSpells Required: Devour, Off-Guard, Bad Breath.", BLU.JobID)]
+        [CustomComboInfo("Tank Debuff Feature", "Puts Devour, Off-Guard, Lucid Dreaming, and Bad Breath into one button when under Tank Mimicry.", BLU.JobID)]
         BLU_DebuffCombo = 70006,
 
         [BlueInactive(BLU.MagicHammer)]
         [ReplaceSkill(BLU.MagicHammer)]
-        [CustomComboInfo("Addle/Magic Hammer Debuff Feature", "Turns Magic Hammer into Addle when off CD. \nSpells Required: Magic Hammer.", BLU.JobID)]
+        [CustomComboInfo("Addle/Magic Hammer Debuff Feature", "Turns Magic Hammer into Addle when off CD.", BLU.JobID)]
         BLU_Addle = 70007,
 
         [BlueInactive(BLU.FeatherRain, BLU.ShockStrike, BLU.RoseOfDestruction, BLU.GlassDance, BLU.JKick)]
         [ReplaceSkill(BLU.FeatherRain)]
-        [CustomComboInfo("Primal Feature", "Turns Feather Rain into any Primals that are off CD. \nSpells Required: Feather Rain, Shock Strike, The Rose of Destruction, Glass Dance, J Kick. \nWill cause primals to desync from Moon Flute burst phases if used on CD.", BLU.JobID)]
+        [CustomComboInfo("Primal Feature", "Turns Feather Rain into any Primals that are off CD. \nWill cause primals to desync from Moon Flute burst phases if used on CD.", BLU.JobID)]
         BLU_PrimalCombo = 70008,
 
         [BlueInactive(BLU.BlackKnightsTour, BLU.WhiteKnightsTour)]
         [ReplaceSkill(BLU.BlackKnightsTour, BLU.WhiteKnightsTour)]
-        [CustomComboInfo("Knight's Tour Feature", "Turns Black Knight's Tour or White Knight's Tour into its counterpart when the enemy is under the effect of the spell's debuff. \nSpells Required: White Knight's Tour, Black Knight's Tour", BLU.JobID)]
+        [CustomComboInfo("Knight's Tour Feature", "Turns Black Knight's Tour or White Knight's Tour into its counterpart when the enemy is under the effect of the spell's debuff.", BLU.JobID)]
         BLU_KnightCombo = 70009,
 
         [BlueInactive(BLU.PeripheralSynthesis, BLU.MustardBomb)]
         [ReplaceSkill(BLU.PeripheralSynthesis)]
-        [CustomComboInfo("Peripheral Synthesis into Mustard Bomb", "Turns Peripheral Synthesis into Mustard Bomb when target is under the effect of Lightheaded. \nSpells Required: Peripheral Synthesis, Mustard Bomb.", BLU.JobID)]
+        [CustomComboInfo("Peripheral Synthesis into Mustard Bomb", "Turns Peripheral Synthesis into Mustard Bomb when target is under the effect of Lightheaded.", BLU.JobID)]
         BLU_LightHeadedCombo = 70010,
 
         [BlueInactive(BLU.BasicInstinct)]
@@ -645,7 +645,9 @@ namespace XIVSlothCombo.Combos
             [ReplaceSkill(DNC.StandardStep)]
             [ParentCombo(DNC_Dance_Menu)]
             [ConflictingCombos(DNC_DanceStepCombo, DNC_DanceComboReplacer, DNC_ST_SimpleMode, DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Combined Dance Feature", "Standard And Technical Dance on one button (SS). Standard > Technical. This combos out into Tillana and Starfall Dance.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Combined Dance Feature", "Standard And Technical Dance on one button (SS)." +
+            "\nStandard > Technical." +
+            "\nThis combos out into Tillana and Starfall Dance.", DNC.JobID, 0, "", "")]
             DNC_CombinedDances = 4022,
 
                 [ParentCombo(DNC_CombinedDances)]
@@ -670,7 +672,8 @@ namespace XIVSlothCombo.Combos
 
         #region Flourishing Features
         [ConflictingCombos(DNC_ST_SimpleMode, DNC_AoE_SimpleMode)]
-        [CustomComboInfo("Flourishing Features", "Features and options involving Fourfold Feathers and Flourish.\nCollapsing this category does NOT disable the features inside.", DNC.JobID, 0, "", "")]
+        [CustomComboInfo("Flourishing Features", "Features and options involving Fourfold Feathers and Flourish." +
+        "\nCollapsing this category does NOT disable the features inside.", DNC.JobID, 0, "", "")]
         DNC_FlourishingFeatures_Menu = 4030,
 
             [ReplaceSkill(DNC.Flourish)]
@@ -683,7 +686,8 @@ namespace XIVSlothCombo.Combos
         #region Fan Dance Combo Features
         [ParentCombo(DNC_FlourishingFeatures_Menu)]
         [ConflictingCombos(DNC_ST_SimpleMode, DNC_AoE_SimpleMode)]
-        [CustomComboInfo("Fan Dance Combo Feature", "Options for Fan Dance combos. Fan Dance 3 takes priority over Fan Dance 4.", DNC.JobID, 0, "", "")]
+        [CustomComboInfo("Fan Dance Combo Feature", "Options for Fan Dance combos." +
+        "\nFan Dance 3 takes priority over Fan Dance 4.", DNC.JobID, 0, "", "")]
         DNC_FanDanceCombos = 4033,
 
             [ReplaceSkill(DNC.FanDance1)]
@@ -715,62 +719,81 @@ namespace XIVSlothCombo.Combos
 
         [ReplaceSkill(DNC.StandardStep, DNC.TechnicalStep)]
         [ConflictingCombos(DNC_CombinedDances, DNC_DanceComboReplacer)]
-        [CustomComboInfo("Dance Step Combo Feature", "Change Standard Step and Technical Step into each dance step while dancing.\nWorks with Simple Dancer and Simple Dancer AoE.", DNC.JobID, 0, "", "")]
+        [CustomComboInfo("Dance Step Combo Feature", "Change Standard Step and Technical Step into each dance step while dancing." +
+        "\nWorks with Simple Dancer and Simple Dancer AoE.", DNC.JobID, 0, "", "")]
         DNC_DanceStepCombo = 4039,
 
         #region Simple Dancer (Single Target)
         [ReplaceSkill(DNC.Cascade)]
         [ConflictingCombos(DNC_ST_MultiButton, DNC_AoE_MultiButton, DNC_CombinedDances, DNC_DanceComboReplacer, DNC_FlourishingFeatures_Menu, DNC_Starfall_Devilment)]
-        [CustomComboInfo("Simple Dancer (Single Target) Feature", "Single button, single target. Includes songs, flourishes and overprotections.\nConflicts with all other non-simple toggles, except 'Dance Step Combo'.", DNC.JobID, 0, "", "")]
+        [CustomComboInfo("Simple Dancer (Single Target) Feature", "Single button, single target. Includes songs, flourishes and overprotections." +
+        "\nConflicts with all other non-simple toggles, except 'Dance Step Combo'.", DNC.JobID, 0, "", "")]
         DNC_ST_SimpleMode = 4050,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Interrupt Option", "Includes an interrupt in the rotation (if applicable to your current target).", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Interrupt Option", "Includes an interrupt in the rotation (if applicable to your current target).", DNC.JobID, 5, "", "")]
             DNC_ST_Simple_Interrupt = 4051,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Standard Dance Option", "Includes Standard Step (and all steps) in the rotation.", DNC.JobID, 0, "", "")]
+            [ConflictingCombos(DNC_ST_Simple_StandardFill)]
+            [CustomComboInfo("Simple Standard Dance Option", "Includes Standard Step (and all steps) in the rotation.", DNC.JobID, 1, "", "")]
             DNC_ST_Simple_SS = 4052,
 
             [ParentCombo(DNC_ST_SimpleMode)]
+            [ConflictingCombos(DNC_ST_Simple_SS)]
+            [CustomComboInfo("Simple Standard Fill Option", "Adds ONLY Standard dance steps and Standard Finish to the rotation." +
+            "\nStandard Step itself must be initiated manually when using this option.", DNC.JobID, 1, "", "")]
+            DNC_ST_Simple_StandardFill = 4061,
+
+            [ParentCombo(DNC_ST_SimpleMode)]
             [ConflictingCombos(DNC_ST_Simple_TechFill)]
-            [CustomComboInfo("Simple Technical Dance Option", "Includes Technical Step, all dance steps and Technical Finish in the rotation.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Technical Dance Option", "Includes Technical Step, all dance steps and Technical Finish in the rotation.", DNC.JobID, 2, "", "")]
             DNC_ST_Simple_TS = 4053,
 
             [ParentCombo(DNC_ST_SimpleMode)]
             [ConflictingCombos(DNC_ST_Simple_TS)]
-            [CustomComboInfo("Simple Tech Fill Option", "Adds ONLY Technical dance steps and Technical Finish to the rotation.\nTechnical Step itself needs to be initiated manually when using this option.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Tech Fill Option", "Adds ONLY Technical dance steps and Technical Finish to the rotation." +
+            "\nTechnical Step itself must be initiated manually when using this option.", DNC.JobID, 2, "", "")]
             DNC_ST_Simple_TechFill = 4054,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Tech Devilment Option", "Includes Devilment in the rotation.\nWill activate only during Technical Finish if you are Lv70 or above.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Tech Devilment Option", "Includes Devilment in the rotation." +
+            "\nWill activate only during Technical Finish if you are Lv70 or above.", DNC.JobID, 2, "", "")]
             DNC_ST_Simple_Devilment = 4055,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Flourish Option", "Includes Flourish in the rotation.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Flourish Option", "Includes Flourish in the rotation.", DNC.JobID, 3, "", "")]
             DNC_ST_Simple_Flourish = 4056,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Feathers Option", "Includes Feather usage in the rotation.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Feathers Option", "Includes Feather usage in the rotation.", DNC.JobID, 4, "", "")]
             DNC_ST_Simple_Feathers = 4057,
 
             [ParentCombo(DNC_ST_Simple_Feathers)]
-            [CustomComboInfo("Simple Feather Pooling Option", "Expends a feather in the next available weave window when capped.\nWeaves feathers where possible during Technical Finish.\nWeaves feathers outside of burst when target is below set HP percentage.", DNC.JobID, 0, "")]
+            [CustomComboInfo("Simple Feather Pooling Option", "Expends a feather in the next available weave window when capped." +
+            "\nWeaves feathers where possible during Technical Finish." +
+            "\nWeaves feathers outside of burst when target is below set HP percentage.", DNC.JobID, 4, "", "")]
             DNC_ST_Simple_FeatherPooling = 4058,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Panic Heals Option", "Includes Curing Waltz and Second Wind in the rotation when available and your HP is below the set percentages.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Panic Heals Option", "Includes Curing Waltz and Second Wind in the rotation when available and your HP is below the set percentages.", DNC.JobID, 5, "", "")]
             DNC_ST_Simple_PanicHeals = 4059,
 
             [ParentCombo(DNC_ST_SimpleMode)]
-            [CustomComboInfo("Simple Improvisation Option", "Includes Improvisation in the rotation when available.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple Improvisation Option", "Includes Improvisation in the rotation when available.", DNC.JobID, 5, "", "")]
             DNC_ST_Simple_Improvisation = 4060,
+
+            [ParentCombo(DNC_ST_SimpleMode)]
+            [CustomComboInfo("Simple Peloton Opener Option", "Uses Peloton when you are out of combat, do not already have the Peloton buff and are performing Standard Step with greater than 5s remaining of your dance." +
+            "\nWill not override Dance Step Combo Feature.", DNC.JobID, 5, "", "")]
+            DNC_ST_Simple_Peloton = 4062,
             #endregion
 
         #region Simple Dancer (AoE)
         [ReplaceSkill(DNC.Windmill)]
         [ConflictingCombos(DNC_ST_MultiButton, DNC_AoE_MultiButton, DNC_CombinedDances, DNC_DanceComboReplacer, DNC_FlourishingFeatures_Menu, DNC_Starfall_Devilment)]
-        [CustomComboInfo("Simple Dancer (AoE) Feature", "Single button, AoE. Includes songs, flourishes and overprotections.\nConflicts with all other non-simple toggles, except 'Dance Step Combo'.", DNC.JobID, 0, "", "")]
+        [CustomComboInfo("Simple Dancer (AoE) Feature", "Single button, AoE. Includes songs, flourishes and overprotections." +
+        "\nConflicts with all other non-simple toggles, except 'Dance Step Combo'.", DNC.JobID, 0, "", "")]
         DNC_AoE_SimpleMode = 4070,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
@@ -778,41 +801,50 @@ namespace XIVSlothCombo.Combos
             DNC_AoE_Simple_Interrupt = 4071,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Simple AoE Standard Dance Option", "Includes Standard Step (and all steps) in the AoE rotation.", DNC.JobID, 0, "")]
+            [ConflictingCombos(DNC_AoE_Simple_StandardFill)]
+            [CustomComboInfo("Simple AoE Standard Dance Option", "Includes Standard Step (and all steps) in the AoE rotation.", DNC.JobID, 1, "", "")]
             DNC_AoE_Simple_SS = 4072,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
+            [ConflictingCombos(DNC_AoE_Simple_SS)]
+            [CustomComboInfo("Simple AoE Standard Fill Option", "Adds ONLY Standard dance steps and Standard Finish to the AoE rotation." +
+            "\nStandard Step itself must be initiated manually when using this option.", DNC.JobID, 2, "", "")]
+            DNC_AoE_Simple_StandardFill = 4081,
+
+            [ParentCombo(DNC_AoE_SimpleMode)]
             [ConflictingCombos(DNC_AoE_Simple_TechFill)]
-            [CustomComboInfo("Simple AoE Technical Dance Option", "Includes Technical Step, all dance steps and Technical Finish in the AoE rotation.", DNC.JobID, 0, "")]
+            [CustomComboInfo("Simple AoE Technical Dance Option", "Includes Technical Step, all dance steps and Technical Finish in the AoE rotation.", DNC.JobID, 3, "", "")]
             DNC_AoE_Simple_TS = 4073,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
             [ConflictingCombos(DNC_AoE_Simple_TS)]
-            [CustomComboInfo("Simple AoE Tech Fill Option", "Adds ONLY Technical dance steps and Technical Finish to the AoE rotation.\nTechnical Step itself needs to be initiated manually when using this option.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Tech Fill Option", "Adds ONLY Technical dance steps and Technical Finish to the AoE rotation." +
+            "\nTechnical Step itself must be initiated manually when using this option.", DNC.JobID, 4, "", "")]
             DNC_AoE_Simple_TechFill = 4074,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Simple AoE Tech Devilment Option", "Includes Devilment in the AoE rotation.\nWill activate only during Technical Finish if you Lv70 or above.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Tech Devilment Option", "Includes Devilment in the AoE rotation." +
+            "\nWill activate only during Technical Finish if you Lv70 or above.", DNC.JobID, 5, "", "")]
             DNC_AoE_Simple_Devilment = 4075,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Simple AoE Flourish Option", "Includes Flourish in the AoE rotation.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Flourish Option", "Includes Flourish in the AoE rotation.", DNC.JobID, 6, "", "")]
             DNC_AoE_Simple_Flourish = 4076,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Simple AoE Feathers Option", "Includes feather usage in the AoE rotation.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Feathers Option", "Includes feather usage in the AoE rotation.", DNC.JobID, 7, "", "")]
             DNC_AoE_Simple_Feathers = 4077,
 
             [ParentCombo(DNC_AoE_Simple_Feathers)]
-            [CustomComboInfo("Simple AoE Feather Pooling Option", "Expends a feather in the next available weave window when capped.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Feather Pooling Option", "Expends a feather in the next available weave window when capped.", DNC.JobID, 8, "", "")]
             DNC_AoE_Simple_FeatherPooling = 4078,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Simple AoE Panic Heals Option", "Includes Curing Waltz and Second Wind in the AoE rotation when available and your HP is below the set percentages.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Panic Heals Option", "Includes Curing Waltz and Second Wind in the AoE rotation when available and your HP is below the set percentages.", DNC.JobID, 9, "", "")]
             DNC_AoE_Simple_PanicHeals = 4079,
 
             [ParentCombo(DNC_AoE_SimpleMode)]
-            [CustomComboInfo("Simple AoE Improvisation Option", "Includes Improvisation in the AoE rotation when available.", DNC.JobID, 0, "", "")]
+            [CustomComboInfo("Simple AoE Improvisation Option", "Includes Improvisation in the AoE rotation when available.", DNC.JobID, 10, "", "")]
             DNC_AoE_Simple_Improvisation = 4080,
             #endregion
 
@@ -2095,7 +2127,7 @@ namespace XIVSlothCombo.Combos
         */
 
         #region Single Target DPS Feature
-        [ReplaceSkill(SGE.Dosis1, SGE.Dosis2, SGE.Dosis3)]
+        [ReplaceSkill(SGE.Dosis, SGE.Dosis2, SGE.Dosis3)]
         [CustomComboInfo("Single Target DPS Feature", "", SGE.JobID, 100, "", "")]
         SGE_ST_Dosis = 14100,
                 
@@ -2118,19 +2150,19 @@ namespace XIVSlothCombo.Combos
         SGE_AoE_Phlegma = 14200,
 
             [ParentCombo(SGE_AoE_Phlegma)]
-            [CustomComboInfo("No Phlegma to Toxikon Option", "Use Toxikon when out of Phlegma charges\nTakes priority over Dyskrasia.", SGE.JobID, 210, "", "")]
+            [CustomComboInfo("Toxikon - No Phlegma Charges Option", "Use Toxikon when out of Phlegma charges\nTakes priority over Dyskrasia.", SGE.JobID, 210, "", "")]
             SGE_AoE_Phlegma_NoPhlegmaToxikon = 14210,
 
             [ParentCombo(SGE_AoE_Phlegma)]
-            [CustomComboInfo("Toxikon Distance Option", "Use Toxikon when out of Phlemga's Range\nTakes priority over Dyskrasia.", SGE.JobID, 220, "", "")]
+            [CustomComboInfo("Toxikon - Out of Phlegma Range Option", "Use Toxikon when out of Phlemga's Range\nTakes priority over Dyskrasia.", SGE.JobID, 220, "", "")]
             SGE_AoE_Phlegma_OutOfRangeToxikon = 14220,
 
             [ParentCombo(SGE_AoE_Phlegma)]
-            [CustomComboInfo("No Phlegma to Dyskrasia Option", "Use Dyskrasia when out of Phlegma charges.", SGE.JobID, 230, "", "")]
+            [CustomComboInfo("Dyskrasia - No Phlegma Charges Option", "Use Dyskrasia when out of Phlegma charges.", SGE.JobID, 230, "", "")]
             SGE_AoE_Phlegma_NoPhlegmaDyskrasia = 14230,
 
             [ParentCombo(SGE_AoE_Phlegma)]
-            [CustomComboInfo("Dyskrasia No-Target Option", "Use Dyskrasia when no target is selected.", SGE.JobID, 240, "", "")]
+            [CustomComboInfo("Dyskrasia - No-Target Option", "Use Dyskrasia when no target is selected.", SGE.JobID, 240, "", "")]
             SGE_AoE_Phlegma_NoTargetDyskrasia = 14240,
 
             [ParentCombo(SGE_AoE_Phlegma)]
@@ -2153,23 +2185,23 @@ namespace XIVSlothCombo.Combos
             SGE_ST_Heal_Diagnosis = 14320,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Soteria Option", "Applies Soteria when the selected target is at or above the set HP percentage.", SGE.JobID, 330, "", "")]
+            [CustomComboInfo("Soteria Option", "Applies Soteria.", SGE.JobID, 330, "", "")]
             SGE_ST_Heal_Soteria = 14330,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Zoe Option", "Applies Zoe when the selected target is at or above the set HP percentage.", SGE.JobID, 340, "", "")]
+            [CustomComboInfo("Zoe Option", "Applies Zoe.", SGE.JobID, 340, "", "")]
             SGE_ST_Heal_Zoe = 14340,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Pepsis Option", "Triggers Pepsis if a shield is present and the selected target is at or above the set HP percentage.", SGE.JobID, 350, "", "")]
+            [CustomComboInfo("Pepsis Option", "Triggers Pepsis if a shield is present.", SGE.JobID, 350, "", "")]
             SGE_ST_Heal_Pepsis = 14350,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Taurochole Option", "Adds Taurochole when the selected target is at or above the set HP percentage.", SGE.JobID, 360, "", "")]
+            [CustomComboInfo("Taurochole Option", "Adds Taurochole.", SGE.JobID, 360, "", "")]
             SGE_ST_Heal_Taurochole = 14360,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Haima Option", "Adds Haima when the selected target is at or above the set HP percentage.", SGE.JobID, 370, "", "")]
+            [CustomComboInfo("Haima Option", "Applies Haima.", SGE.JobID, 370, "", "")]
             SGE_ST_Heal_Haima = 14370,
 
             [ParentCombo(SGE_ST_Heal)]
@@ -2177,11 +2209,11 @@ namespace XIVSlothCombo.Combos
             SGE_ST_Heal_Rhizomata = 14380,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Krasis Option", "Applies Krasis when the selected target is at or above the set HP percentage.", SGE.JobID, 390, "", "")]
+            [CustomComboInfo("Krasis Option", "Applies Krasis.", SGE.JobID, 390, "", "")]
             SGE_ST_Heal_Krasis = 14390,
 
             [ParentCombo(SGE_ST_Heal)]
-            [CustomComboInfo("Druochole Option", "Adds Druochole when the selected target is at or above the set HP percentage.", SGE.JobID, 400, "", "")]
+            [CustomComboInfo("Druochole Option", "Applies Druochole.", SGE.JobID, 400, "", "")]
             SGE_ST_Heal_Druochole = 14400,
             #endregion
 
@@ -2225,10 +2257,12 @@ namespace XIVSlothCombo.Combos
             #endregion
 
         #region Misc Healing
+        [ConflictingCombos(SGE_ST_Heal, SGE_AoE_Heal)]
         [ReplaceSkill(SGE.Taurochole, SGE.Druochole, SGE.Ixochole, SGE.Kerachole)]
         [CustomComboInfo("Rhizomata Feature", "Replaces Addersgall skills with Rhizomata when empty.", SGE.JobID, 600, "", "")]
         SGE_Rhizo = 14600,
 
+        [ConflictingCombos(SGE_ST_Heal, SGE_AoE_Heal)]
         [ReplaceSkill(SGE.Druochole)]
         [CustomComboInfo("Druochole to Taurochole Feature", "Upgrades Druochole to Taurochole when Taurochole is available.", SGE.JobID, 700, "", "")]
         SGE_DruoTauro = 14700,
@@ -2518,6 +2552,15 @@ namespace XIVSlothCombo.Combos
         [ReplaceSkill(SCH.WhisperingDawn, SCH.FeyBlessing, SCH.FeyBlessing, SCH.Aetherpact, SCH.Dissipation)]
         [CustomComboInfo("Fairy Feature", "Change all fairy actions into Fairy Summons if you do not have a fairy summoned.", SCH.JobID, 500, "", "")]
         SCH_FairyReminder = 16500,
+
+        [ReplaceSkill(SCH.DeploymentTactics)]
+        [CustomComboInfo("Deployment Tactics Feature", "Deployment Tactics idles as Adloquium until the Party Member has the Galvanize Buff", SCH.JobID, 600, "", "")]
+        SCH_DeploymentTactics = 16600,
+
+            [ParentCombo(SCH_DeploymentTactics)]
+            [CustomComboInfo("Recitation Option", "Adds Recitation when off cooldown to force a Galvanize Buff on the Party Member.", SCH.JobID, 601, "", "")]
+            SCH_DeploymentTactics_Recitation = 16610,
+        
         #endregion
 
         #endregion
@@ -2562,7 +2605,7 @@ namespace XIVSlothCombo.Combos
         SMN_CarbuncleReminder = 17010,
 
         [ParentCombo(SMN_Advanced_Combo)]
-        [CustomComboInfo("Ruin IV Combo Option", "Adds Ruin IV to the single target and AoE combos when you have no active Egi or Demi summon.", SMN.JobID, 0, "", "")]
+        [CustomComboInfo("Ruin IV Combo Option", "Adds Ruin IV to the single target and AoE combos.\nUses when moving during Garuda Phase and you have no attunement, when moving during Ifrit phase, or when you have no active Egi or Demi summon.", SMN.JobID, 0, "", "")]
         SMN_Advanced_Combo_Ruin4 = 17011,
 
         [ParentCombo(SMN_EDFester)]
@@ -2624,7 +2667,7 @@ namespace XIVSlothCombo.Combos
         SMN_SearingLight_STOnly = 17036,
         
         [ParentCombo(SMN_DemiEgiMenu_oGCDPooling)]
-        [CustomComboInfo("Use only on Single Target combo", "Prevent this feature from applying to the AoE combo.", SMN.JobID, 2, "", "")]
+        [CustomComboInfo("Use only on Single Target combo", "Prevent this feature from applying to the AoE combo.", SMN.JobID, 3, "", "")]
         SMN_DemiEgiMenu_oGCDPooling_Only = 17037,
         
         [ParentCombo(SMN_DemiEgiMenu_SwiftcastEgi)]
@@ -2643,6 +2686,10 @@ namespace XIVSlothCombo.Combos
         [ReplaceSkill(SMN.Ruin, SMN.Ruin2, SMN.Outburst, SMN.Tridisaster)]
         [CustomComboInfo("Simple Summoner Feature", "General purpose one-button combo.\nBursts on Bahamut phase.\nSummons Titan, Garuda, then Ifrit.\nSwiftcasts on Slipstream unless drifted.", SMN.JobID, -1, "", "")]
         SMN_Simple_Combo = 17041,
+
+        [ParentCombo(SMN_DemiEgiMenu_oGCDPooling)]
+        [CustomComboInfo("Burst Delay Option", "Only follows Burst Delay settings for the opener burst.\nThis Option is for high SPS builds.", SMN.JobID, 2, "", "")]
+        SMN_Advanced_Burst_Delay_Option = 17043,
         #endregion
 
         #region WARRIOR
@@ -2726,128 +2773,159 @@ namespace XIVSlothCombo.Combos
         [ParentCombo(WAR_ST_StormsPath_Onslaught)]
         [CustomComboInfo("Melee Onslaught Option", "Uses Onslaught when under Surging Tempest and in the target ring (1 yalm).\nWill use as many stacks as selected in the above slider.", WAR.JobID, 0, "", "")]
         WAR_ST_StormsPath_Onslaught_MeleeSpender = 18024,
-        
+
         #endregion
 
         #region WHITE MAGE
 
+        #region Single Target DPS Feature
+
         [ReplaceSkill(WHM.Stone1, WHM.Stone2, WHM.Stone3, WHM.Stone4, WHM.Glare1, WHM.Glare3)]
-        [CustomComboInfo("CDs on Glare/Stone", "Collection of CDs and spell features on Glare/Stone.", WHM.JobID, 0, "", "")]
+        [CustomComboInfo("Single Target DPS Feature", "Collection of cooldowns and spell features on Glare/Stone.", WHM.JobID, 10, "", "")]
         WHM_ST_MainCombo = 19099,
 
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Glare III Opener Option", "Delays all oGCDs until after third Glare III cast." +
+            "\nOnly works with Glare III.", WHM.JobID, 11, "", "")]
+            WHM_ST_MainCombo_NoSwiftOpener = 19023,
+
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Aero/Dia Uptime Option", "Adds Aero/Dia to the single target combo if the debuff is not present on current target, or is about to expire.", WHM.JobID, 12, "", "")]
+            WHM_ST_MainCombo_DoT = 19013,
+
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Assize Option", "Adds Assize to the single target combo.", WHM.JobID, 13, "", "")]
+            WHM_ST_MainCombo_Assize = 19009,
+
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Afflatus Misery Option", "Adds Afflatus Misery to the single target combo when it is ready to be used.", WHM.JobID, 14, "", "")]
+            WHM_ST_MainCombo_Misery_oGCD = 19017,
+
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Lily Overcap Protection Option", "Adds Afflatus Rapture to the single target combo when at three Lilies.", WHM.JobID, 15, "", "")]
+            WHM_ST_MainCombo_LilyOvercap = 19016,
+
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Presence of Mind Option", "Adds Presence of Mind to the single target combo.", WHM.JobID, 16, "", "")]
+            WHM_ST_MainCombo_PresenceOfMind = 19008,
+
+            [ParentCombo(WHM_ST_MainCombo)]
+            [CustomComboInfo("Lucid Dreaming Option", "Adds Lucid Dreaming to the single target combo when below set MP value.", WHM.JobID, 17, "", "")]
+            WHM_ST_MainCombo_Lucid = 19006,
+
+            #endregion
+
+        #region AoE DPS Feature
+
+        [ReplaceSkill(WHM.Holy, WHM.Holy3)]
+        [CustomComboInfo("AoE DPS Feature", "Collection of cooldowns and spell features on Holy/Holy III.", WHM.JobID, 20, "", "")]
+        WHM_AoE_DPS = 19190,
+
+            [ParentCombo(WHM_AoE_DPS)]
+            [CustomComboInfo("Assize Option", "Adds Assize to the AoE combo.", WHM.JobID, 21, "", "")]
+            WHM_AoE_DPS_Assize = 19192,
+
+            [ParentCombo(WHM_AoE_DPS)]
+            [CustomComboInfo("Afflatus Misery Option", "Adds Afflatus Misery to the AoE combo when it is ready to be used.", WHM.JobID, 22, "", "")]
+            WHM_AoE_DPS_Misery = 19194,
+
+            [ParentCombo(WHM_AoE_DPS)]
+            [CustomComboInfo("Lily Overcap Protection Option", "Adds Afflatus Rapture to the AoE combo when at three Lilies.", WHM.JobID, 23, "", "")]
+            WHM_AoE_DPS_LilyOvercap = 19193,
+
+            [ParentCombo(WHM_AoE_DPS)]
+            [CustomComboInfo("Presence of Mind Option", "Adds Presence of Mind to the AoE combo.", WHM.JobID, 24, "", "")]
+            WHM_AoE_DPS_PresenceOfMind = 19195,
+
+            [ParentCombo(WHM_AoE_DPS)]
+            [CustomComboInfo("Lucid Dreaming Option", "Adds Lucid Dreaming to the AoE combo when below set MP value.", WHM.JobID, 25, "", "")]
+            WHM_AoE_DPS_Lucid = 19191,
+
+            #endregion
+
         [ReplaceSkill(WHM.AfflatusSolace)]
-        [CustomComboInfo("Solace into Misery", "Replaces Afflatus Solace with Afflatus Misery when Misery is ready to be used", WHM.JobID, 0, "", "")]
+        [CustomComboInfo("Solace into Misery Feature", "Replaces Afflatus Solace with Afflatus Misery when it is ready to be used.", WHM.JobID, 30, "", "")]
         WHM_SolaceMisery = 19000,
 
         [ReplaceSkill(WHM.AfflatusRapture)]
-        [CustomComboInfo("Rapture into Misery", "Replaces Afflatus Rapture with Afflatus Misery when Misery is ready to be used", WHM.JobID, 0, "", "")]
+        [CustomComboInfo("Rapture into Misery Feature", "Replaces Afflatus Rapture with Afflatus Misery when it is ready to be used.", WHM.JobID, 40, "", "")]
         WHM_RaptureMisery = 19001,
 
-        [ReplaceSkill(WHM.Cure2)]
-        [CustomComboInfo("Cure 2 to Cure Level Sync", "Changes Cure 2 to Cure when below level 30 in synced content.", WHM.JobID, 0, "", "")]
-        WHM_CureSync = 19002,
+        #region Afflatus Feature
 
         [ReplaceSkill(WHM.Cure2)]
-        [CustomComboInfo("Afflatus Feature", "Changes Cure 2 into Afflatus Solace, and Medica into Afflatus Rapture, when lilies are up.", WHM.JobID, 0, "", "")]
+        [CustomComboInfo("Afflatus Feature", "Changes Cure II into Afflatus Solace when Lilies are up." +
+        "\nChanges Medica into Afflatus Rapture when Lilies are up.", WHM.JobID, 50, "", "")]
         WHM_Afflatus = 19003,
+
+            [ParentCombo(WHM_Afflatus)]
+            [ReplaceSkill(WHM.Cure2)]
+            [CustomComboInfo("Afflatus Misery Heal Feature", "Changes Cure II into Afflatus Misery when Misery is ready to be used.", WHM.JobID, 51, "", "")]
+            WHM_Cure2_Misery = 19012,
+
+            #region oGCD Heals/Shields Option
+
+            [ParentCombo(WHM_Afflatus)]
+            [CustomComboInfo("oGCD Heals/Shields Option", "Adds oGCD Healing and Shields to Cure II.", WHM.JobID, 52, "", "")]
+            WHM_Afflatus_oGCDHeals = 19018,
+
+                [ParentCombo(WHM_Afflatus_oGCDHeals)]
+                [CustomComboInfo("Use Tetragrammaton on oGCD Option", "Only shows Tetragrammaton during oGCD weave window when HP conditions are met.", WHM.JobID, 53, "", "")]
+                WHM_Afflatus_oGCDHeals_TetraWeave = 19019,
+
+                [ParentCombo(WHM_Afflatus_oGCDHeals)]
+                [CustomComboInfo("Use Tetragrammaton on GCD Option", "Shows Tetragrammaton when HP conditions are met.", WHM.JobID, 54, "", "")]
+                WHM_Afflatus_oGCDHeals_Tetra = 19020,
+
+                [ParentCombo(WHM_Afflatus_oGCDHeals)]
+                [CustomComboInfo("Use Divine Benison on oGCD Option", "Only shows Divine Benison during oGCD weave window when target is not already under the effect.", WHM.JobID, 55, "", "")]
+                WHM_Afflatus_oGCDHeals_BenisonWeave = 19021,
+
+                [ParentCombo(WHM_Afflatus_oGCDHeals)]
+                [CustomComboInfo("Use Divine Benison on GCD Option", "Shows Divine Benison when target is not already under the effect.", WHM.JobID, 56, "", "")]
+                WHM_Afflatus_oGCDHeals_Benison = 19022,
+
+                [ParentCombo(WHM_Afflatus_oGCDHeals)]
+                [CustomComboInfo("Prioritize oGCDs Option", "Displays oGCD Heals/Shields over Afflatus" +
+                "\n(only applies to GCD options for Tetragrammaton and Divine Benison).", WHM.JobID, 57, "", "")]
+                WHM_Afflatus_oGCDHeals_Prio = 19024,
+
+            #endregion
+
+        #endregion
+
+        #region Medica Feature
+
+        [ReplaceSkill(WHM.Medica2)]
+        [CustomComboInfo("Medica Feature", "Replaces Medica II with Medica whenever you are under Medica II's regen.", WHM.JobID, 60, "", "")]
+        WHM_Medica = 19007,
+
+            [ParentCombo(WHM_Medica)]
+            [CustomComboInfo("Afflatus Rapture on Medica Option", "Adds Afflatus Rapture to the Medica Feature when available.", WHM.JobID, 61, "", "")]
+            WHM_Medica_Rapture = 19011,
+
+            [ParentCombo(WHM_Medica)]
+            [CustomComboInfo("Afflatus Misery on Medica Option", "Adds Afflatus Misery to the Medica Feature when Misery is ready to be used.", WHM.JobID, 62, "", "")]
+            WHM_Medica_Misery = 19010,
+
+            [ParentCombo(WHM_Medica)]
+            [CustomComboInfo("Thin Air on Medica Option", "Adds Thin Air to the Medica Feature when available.", WHM.JobID, 63, "", "")]
+            WHM_Medica_ThinAir = 19200,
+
+        #endregion
+
+        [ReplaceSkill(WHM.Cure2)]
+        [CustomComboInfo("Cure II Sync Feature", "Changes Cure II to Cure when synced below Lv.30.", WHM.JobID, 70, "", "")]
+        WHM_CureSync = 19002,
 
         [ReplaceSkill(All.Swiftcast)]
         [ConflictingCombos(ALL_Healer_Raise)]
-        [CustomComboInfo("WHM Alternative Raise Feature", "Changes Swiftcast to Raise", WHM.JobID, 0, "", "")]
+        [CustomComboInfo("Alternative Raise Feature", "Changes Swiftcast to Raise.", WHM.JobID, 80, "", "")]
         WHM_Raise = 19004,
 
-        [ReplaceSkill(WHM.Stone1, WHM.Stone2, WHM.Stone3, WHM.Stone4, WHM.Glare1, WHM.Glare3)]
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("Lucid Dreaming Feature", "Adds Lucid dreaming to the DPS feature when below set MP value.", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_Lucid = 19006,
-
-        [ReplaceSkill(WHM.Medica2)]
-        [CustomComboInfo("Medica Feature", "Replaces Medica2 whenever you are under Medica2 regen with Medica1", WHM.JobID, 0, "", "")]
-        WHM_Medica = 19007,
-
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("Presence Of Mind Feature", "Adds Presence of mind as oGCD onto main DPS Feature(Glare3)", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_PresenceOfMind = 19008,
-
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("Assize Feature", "Adds Assize as oGCD onto main DPS Feature(Glare3)", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_Assize = 19009,
-
-        [ParentCombo(WHM_Medica)]
-        [CustomComboInfo("Afflatus Misery On Medica Feature", "Adds Afflatus Misery onto the Medica Feature", WHM.JobID, 0, "", "")]
-        WHM_Medica_Misery = 19010,
-
-        [ParentCombo(WHM_Medica)]
-        [CustomComboInfo("Afflatus Rapture On Medica Feature", "Adds Afflatus Rapture onto the Medica Feature", WHM.JobID, 0, "", "")]
-        WHM_Medica_Rapture = 19011,
-
-        [ReplaceSkill(WHM.Cure2)]
-        [CustomComboInfo("Afflatus Misery Feature", "Changes Cure 2 into Afflatus Misery.", WHM.JobID, 0, "", "")]
-        WHM_Cure2_Misery = 19012,
-
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("Adds DoT to Glare/Stone", "Adds DoT to DPS feature and refreshes it with 3 seconds remaining.", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_DoT = 19013,
-
         [ReplaceSkill(WHM.Raise)]
-        [CustomComboInfo("Thin Air Raise Feature", "Adds Thin Air to the WHM Raise Feature/Alternative Feature", WHM.JobID, 0, "", "")]
+        [CustomComboInfo("Thin Air Raise Feature", "Adds Thin Air to the Global Raise Feature/Alternative Raise Feature.", WHM.JobID, 90, "", "")]
         WHM_ThinAirRaise = 19014,
-
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("Lily Overcap Protection", "Adds Afflatus Rapture (AoE Heal) to glare when at 3 lilies.", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_LilyOvercap = 19016,
-
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("Adds Afflatus Misery to Glare/Stone", "Adds Afflatus Misery to Glare when Blood Lily is in full bloom.", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_Misery_oGCD = 19017,
-
-        [ParentCombo(WHM_Afflatus)]
-        [CustomComboInfo("oGCD Heals/Shields", "Adds oGCD Healing and Shields to Cure II", WHM.JobID, 0, "", "")]
-        WHM_Afflatus_oGCDHeals = 19018,
-
-        [ParentCombo(WHM_Afflatus_oGCDHeals)]
-        [CustomComboInfo("Use Tetragrammaton on oGCD.", "Only shows Tetragrammaton during oGCD weave window when HP conditions are met.", WHM.JobID, 0, "", "")]
-        WHM_Afflatus_oGCDHeals_TetraWeave = 19019,
-
-        [ParentCombo(WHM_Afflatus_oGCDHeals)]
-        [CustomComboInfo("Use Tetragrammaton on GCD.", "Shows Tetragrammaton when HP conditions are met.", WHM.JobID, 0, "", "")]
-        WHM_Afflatus_oGCDHeals_Tetra = 19020,
-
-        [ParentCombo(WHM_Afflatus_oGCDHeals)]
-        [CustomComboInfo("Use Devine Benison on oGCD", "Only shows Devine Benison during oGCD weave window when target is not already under the effect.", WHM.JobID, 0, "", "")]
-        WHM_Afflatus_oGCDHeals_BenisonWeave = 19021,
-
-        [ParentCombo(WHM_Afflatus_oGCDHeals)]
-        [CustomComboInfo("Use Devine Benison on GCD", "Shows Devine Benison when target is not already under the effect.", WHM.JobID, 0, "", "")]
-        WHM_Afflatus_oGCDHeals_Benison = 19022,
-
-        [ParentCombo(WHM_ST_MainCombo)]
-        [CustomComboInfo("No Swift Opener Option", "Delays all oGCDs until after 3rd Glare 3 cast.\n>> Glare III ONLY <<", WHM.JobID, 0, "", "")]
-        WHM_ST_MainCombo_NoSwiftOpener = 19023,
-
-        [ParentCombo(WHM_Afflatus_oGCDHeals)]
-        [CustomComboInfo("Prioritize oGCD Heals/Shields on Cure II when available.", "Displays oGCD Heals/Shields over Afflatus.\n(Only applies to GCD options for Tetragrammaton and Divine Benison)", WHM.JobID, 0, "", "")]
-        WHM_Afflatus_oGCDHeals_Prio = 19024,
-
-        [ReplaceSkill(WHM.Holy, WHM.Holy3)]
-        [CustomComboInfo("CDs on Holy/Holy3", "Collection of CDs and spell features on Holy/Holy3.", WHM.JobID, 0, "", "")]
-        WHM_AoE_DPS = 19190,
-
-        [ParentCombo(WHM_AoE_DPS)]
-        [CustomComboInfo("Lucid Dreaming Feature", "Adds Lucid dreaming to the AoE DPS feature when below set MP value.", WHM.JobID, 0, "", "")]
-        WHM_AoE_DPS_Lucid = 19191,
-
-        [ParentCombo(WHM_AoE_DPS)]
-        [CustomComboInfo("Assize Feature", "Adds Assize as oGCD to Holy/Holy3", WHM.JobID, 0, "", "")]
-        WHM_AoE_DPS_Assize = 19192,
-
-        [ParentCombo(WHM_AoE_DPS)]
-        [CustomComboInfo("Lily Overcap Protection", "Adds Afflatus Rapture (AoE Heal) to Holy/Holy3 when at 3 lilies.", WHM.JobID, 0, "", "")]
-        WHM_AoE_DPS_LilyOvercap = 19193,
-
-        [ParentCombo(WHM_AoE_DPS)]
-        [CustomComboInfo("Adds Afflatus Misery to Holy/Holy3", "Adds Afflatus Misery to Holy/Holy3 when Blood Lily is in full bloom.", WHM.JobID, 0, "", "")]
-        WHM_AoE_DPS_Misery = 19194,
 
         #endregion
 
@@ -2969,7 +3047,7 @@ namespace XIVSlothCombo.Combos
 
             [SecretCustomCombo]
             [ParentCombo(DNCPvP_BurstMode)]
-            [CustomComboInfo("Curing Waltz Option", "Adds Curing Waltz to the main combo when available, and your HP is at or below the set percentage.", DNC.JobID)]
+            [CustomComboInfo("Curing Waltz Option", "Adds Curing Waltz to the combo when available, and your HP is at or below the set percentage.", DNC.JobID)]
             DNCPvP_BurstMode_CuringWaltz = 80072,
         #endregion
 
@@ -3120,6 +3198,14 @@ namespace XIVSlothCombo.Combos
         #endregion
 
         #region SUMMONER
+        [SecretCustomCombo]
+        [CustomComboInfo("Burst Mode", "Turns Ruin III into an all-in-one damage button.\nOnly uses Crimson Cyclone when in melee range.", SMNPvP.JobID)]
+        SMNPvP_BurstMode = 80300,
+
+        [SecretCustomCombo]
+        [ParentCombo(SMNPvP_BurstMode)]
+        [CustomComboInfo("Radiant Aegis Option", "Adds Radiant Aegis to the combo when available, and your HP is at or below the set percentage.", SMNPvP.JobID)]
+        SMNPvP_BurstMode_RadiantAegis = 80301,
 
         #endregion
 
