@@ -85,17 +85,21 @@ namespace XIVSlothCombo.Combos.PvE
             public const byte
                 SpinningEdge = 1,
                 GustSlash = 4,
+                Hide = 10,
                 Mug = 15,
+                ThrowingDaggers = 15,
                 AeolianEdge = 26,
                 Ten = 30,
                 Chi = 35,
                 Jin = 45,
                 Doton = 45,
+                Huton = 45,
                 Assassinate = 40,
                 Kassatsu = 50,
                 HakkeMujinsatsu = 52,
                 ArmorCrush = 54,
                 Huraijin = 60,
+                Hellfrog = 62,
                 Bhavacakra = 68,
                 Meisui = 72,
                 EnhancedKassatsu = 76,
@@ -253,6 +257,27 @@ namespace XIVSlothCombo.Combos.PvE
 
                     if (level >= Levels.Huraijin && gauge.HutonTimer == 0 && !HasEffect(Buffs.Mudra))
                         return Huraijin;
+                    
+                    if (level < Levels.Huraijin && level >= Levels.Huton && gauge.HutonTimer == 0) {
+
+                        if (OriginalHook(Ninjutsu) == Huton)
+                            return OriginalHook(Ninjutsu);
+
+                        if (OriginalHook(Ninjutsu) == Raiton)
+                            return OriginalHook(TenCombo);
+
+                        if (OriginalHook(Ninjutsu) == FumaShuriken)
+                            return OriginalHook(ChiCombo);
+
+                        if (GetCooldown(Jin).RemainingCharges > 0)
+                            return Jin;
+                    }
+
+                    if (level > Levels.Hide && !HasEffect(Buffs.Hidden) && !HasEffect(Buffs.Mudra))
+                    {
+                        if (gauge.HutonTimer >= 10 && GetCooldown(Jin).RemainingCharges < 2 && !GetCooldown(Hide).IsCooldown && !InCombat())
+                            return Hide;
+                    }
 
                     if (level >= Levels.Mug && IsEnabled(CustomComboPreset.NIN_ST_Simple_Mug))
                     {
@@ -311,9 +336,17 @@ namespace XIVSlothCombo.Combos.PvE
                     }
                     else
                     {
-                        if (OriginalHook(Ninjutsu) == Raiton)
+                        if (OriginalHook(Ninjutsu) == Huton)
                             return OriginalHook(Ninjutsu);
+                            
+                        if (OriginalHook(Ninjutsu) == Raiton)
+                        {
+                            if (level < Levels.Huraijin && gauge.HutonTimer == 0)
+                                return OriginalHook(TenCombo);
 
+                            return OriginalHook(Ninjutsu);
+                        }
+                            
                         if (OriginalHook(Ninjutsu) == FumaShuriken)
                         {
                             if (level < Levels.Chi)
@@ -330,7 +363,16 @@ namespace XIVSlothCombo.Combos.PvE
                             if (GetCooldown(Jin).RemainingCharges > 0)
                                 return Jin;
                         }
+                        else {
+
+                            if (HasBattleTarget() && GetCooldown(Ten).RemainingCharges > 0)
+                                return OriginalHook(Ten);
+                            
+                        }
                     }
+
+                    if (level >= Levels.ThrowingDaggers && !InMeleeRange() && !HasEffect(Buffs.Mudra))
+                        return ThrowingDaggers;
 
                     if (!IsEnabled(CustomComboPreset.NIN_NinkiPooling_Bunshin))
                     {
@@ -348,13 +390,21 @@ namespace XIVSlothCombo.Combos.PvE
 
                     if (!IsEnabled(CustomComboPreset.NIN_NinkiPooling_Bhavacakra))
                     {
-                        if (gauge.Ninki >= 50 && canWeave && level >= Levels.Bhavacakra)
-                            return Bhavacakra;
+                        if (gauge.Ninki >= 50 && canWeave)
+                            if (level >= Levels.Bhavacakra)
+                                return Bhavacakra;
+                            else if (level >= Levels.Hellfrog)
+                                return Hellfrog;
                     }
                     else
                     {
-                        if (gauge.Ninki >= ninkiBhavaPooling && canWeave && level >= Levels.Bhavacakra)
-                            return Bhavacakra;
+                        if (gauge.Ninki >= ninkiBhavaPooling && canWeave)
+                        {
+                            if (level >= Levels.Bhavacakra)
+                                return Bhavacakra;
+                            else if (level >= Levels.Hellfrog)
+                                return Hellfrog;
+                        }
                     }
 
                     if (level >= Levels.Assassinate)
@@ -445,9 +495,9 @@ namespace XIVSlothCombo.Combos.PvE
 
                             if (OriginalHook(Ninjutsu) == FumaShuriken)
                                 return TenCombo;
-
-
-                            return OriginalHook(Chi);
+                                
+                            if (HasBattleTarget())
+                                return OriginalHook(Chi);
                         }
                         else
                         {
