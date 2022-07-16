@@ -1626,10 +1626,10 @@ namespace XIVSlothCombo.Combos
         [CustomComboInfo("Simple Mudras", "Simplify the mudra casting to avoid failing.", NIN.JobID, 19, "", "")]
         NIN_Simple_Mudras = 10020,
 
-        [ReplaceSkill(NIN.TenChiJin)]
-        [ParentCombo(NIN_TCJMeisui)]
-        [CustomComboInfo("Ten Chi Jin Feature", "Turns Ten Chi Jin (the move) into Ten, Chi, and Jin.", NIN.JobID, 20, "", "")]
-        NIN_TCJ = 10021,
+        // [ReplaceSkill(NIN.TenChiJin)]
+        // [ParentCombo(NIN_TCJMeisui)]
+        // [CustomComboInfo("Ten Chi Jin Feature", "Turns Ten Chi Jin (the move) into Ten, Chi, and Jin.", NIN.JobID, 20, "", "")]
+        // NIN_TCJ = 10021,
 
         [ReplaceSkill(NIN.SpinningEdge)]
         [ConflictingCombos(NIN_ArmorCrushCombo, NIN_AeolianEdgeCombo, NIN_GCDsNinjutsu)]
