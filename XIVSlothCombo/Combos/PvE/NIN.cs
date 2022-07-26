@@ -257,7 +257,7 @@ namespace XIVSlothCombo.Combos.PvE
                     if (HasEffect(Buffs.RaijuReady) && noMudra)
                         return FleetingRaiju;
 
-                    if (HasEffect(Buffs.TenChiJin))
+                    if (HasEffect(Buffs.TenChiJin) && !this.IsMoving)
                     {
                         var tcjTimer = FindEffectAny(Buffs.TenChiJin).RemainingTime;
 
@@ -444,7 +444,7 @@ namespace XIVSlothCombo.Combos.PvE
                             return OriginalHook(Assassinate);
                     }
 
-                    if (level >= Levels.TenChiJin && !HasEffect(Buffs.Kassatsu) && canWeave && InMeleeRange() && noMudra)
+                    if (level >= Levels.TenChiJin && !HasEffect(Buffs.Kassatsu) && canWeave && !this.IsMoving && noMudra)
                     {
                         if (!HasEffect(Buffs.TenChiJin) && !GetCooldown(TenChiJin).IsCooldown)
                             return OriginalHook(TenChiJin);

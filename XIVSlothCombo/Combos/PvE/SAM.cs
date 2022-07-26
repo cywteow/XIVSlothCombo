@@ -221,10 +221,10 @@ namespace XIVSlothCombo.Combos.PvE
 
                                 if (twoSeal && gauge.MeditationStacks == 0 && GetCooldownRemainingTime(Ikishoten) < 110 && IsOnCooldown(Ikishoten))
                                 {
-                                    if (gauge.Kenki >= 10 && IsOffCooldown(Gyoten))
+                                    if (level >= Levels.Gyoten && gauge.Kenki >= 10 && IsOffCooldown(Gyoten))
                                         return Gyoten;
 
-                                    if (gauge.Kenki >= 25)
+                                    if (level >= Levels.Shinten && gauge.Kenki >= 25)
                                         return Shinten;
                                 }
 
@@ -323,7 +323,7 @@ namespace XIVSlothCombo.Combos.PvE
 
                                     if (SamFillerCombo == 2)
                                     {
-                                        if (!InMeleeRange() && !HasEffect(Buffs.EnhancedEnpi) && gauge.Kenki >= 10)
+                                        if (level >= Levels.Gyoten && !InMeleeRange() && !HasEffect(Buffs.EnhancedEnpi) && gauge.Kenki >= 10)
                                             return Gyoten;
 
                                         if (HasEffect(Buffs.EnhancedEnpi))
@@ -393,7 +393,7 @@ namespace XIVSlothCombo.Combos.PvE
 
                                     if (SamFillerCombo == 3)
                                     {
-                                        if (!InMeleeRange() && !HasEffect(Buffs.EnhancedEnpi) && gauge.Kenki >= 10)
+                                        if (level >= Levels.Gyoten && !InMeleeRange() && !HasEffect(Buffs.EnhancedEnpi) && gauge.Kenki >= 10)
                                             return Gyoten;
 
                                         if (gauge.Kenki >= 75 && CanWeave(actionID))
