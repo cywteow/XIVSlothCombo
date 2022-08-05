@@ -316,6 +316,10 @@ namespace XIVSlothCombo.Combos.PvE
                     if (healTarget is null && HasFriendlyTarget(CurrentTarget)) healTarget = CurrentTarget;
                     if (healTarget is null) healTarget = LocalPlayer;
 
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Kardia) && LevelChecked(Kardia) &&
+                        FindEffect(Buffs.Kardia) is null)
+                        return Kardia;
+
                     if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Druochole) && ActionReady(Druochole) &&
                         Gauge.Addersgall >= 1 &&
                         GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Druochole))
@@ -329,11 +333,6 @@ namespace XIVSlothCombo.Combos.PvE
                     if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Rhizomata) && ActionReady(Rhizomata) &&
                         Gauge.Addersgall is 0)
                         return Rhizomata;
-
-                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Kardia) && LevelChecked(Kardia) &&
-                        FindEffect(Buffs.Kardia) is null &&
-                        FindEffect(Buffs.Kardion, healTarget, LocalPlayer?.ObjectId) is null)
-                        return Kardia;
 
                     if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Soteria) && ActionReady(Soteria) &&
                         GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Soteria))
