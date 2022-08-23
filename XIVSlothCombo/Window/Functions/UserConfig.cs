@@ -1172,6 +1172,30 @@ namespace XIVSlothCombo.Window.Functions
             if (preset is CustomComboPreset.SGE_ST_Heal_Diagnosis)
                 UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Diagnosis, "Use Diagnosis when Target HP is at or below set percentage");
 
+            if (preset is CustomComboPreset.SGE_ST_Heal_Soteria_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Soteria_LowestPartyMemberExcludingTank, "Use Soteria when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Zoe_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Zoe_LowestPartyMemberExcludingTank, "Use Zoe when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Pepsis_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Pepsis_LowestPartyMemberExcludingTank, "Use Pepsis when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Taurochole_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Taurochole_LowestPartyMemberExcludingTank, "Use Taurochole when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Haima_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Haima_LowestPartyMemberExcludingTank, "Use Haima when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Krasis_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Krasis_LowestPartyMemberExcludingTank, "Use Krasis when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Druochole_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Druochole_LowestPartyMemberExcludingTank, "Use Druochole when Target HP is at or below set percentage");
+
+            if (preset is CustomComboPreset.SGE_ST_Heal_Diagnosis_LowestPartyMemberExcludingTank)
+                UserConfig.DrawSliderInt(0, 100, SGE.Config.SGE_ST_Heal_Diagnosis_LowestPartyMemberExcludingTank, "Use Diagnosis when Target HP is at or below set percentage");
+
             if (preset is CustomComboPreset.SGE_Eukrasia)
             {
                 UserConfig.DrawRadioButton(SGE.Config.SGE_Eukrasia_Mode, "Eukrasian Dosis", "", 0);

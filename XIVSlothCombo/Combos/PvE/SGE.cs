@@ -365,6 +365,107 @@ namespace XIVSlothCombo.Combos.PvE
             }
         }
 
+        internal class SGE_ST_Heal_LowestPartyMemberExcludingTank : CustomCombo
+        {
+            private new bool GetTarget = true;
+
+            private List<GameObject> PartyTargets = new();
+
+            private int[] fourManParty = { 1, 3, 4};
+
+            private int[] eightManParty = { 1, 3, 4, 5, 6, 7, 8 };
+
+            protected internal override CustomComboPreset Preset { get; } = CustomComboPreset.SGE_ST_Heal_LowestPartyMemberExcludingTank;
+            protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
+            {
+                if (actionID is Druochole)
+                {
+                    if (HasEffect(Buffs.Eukrasia))
+                        return EukrasianDiagnosis;
+
+                    // Set Target. Soft -> Hard -> Self priority, matching normal in-game behavior
+                    GameObject? healTarget = null;
+                    if (GetTarget)
+                        SetTarget();
+                    if (healTarget is null && HasFriendlyTarget(PartyTargets[0])) healTarget = PartyTargets[0];
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Kardia_LowestPartyMemberExcludingTank) && LevelChecked(Kardia) &&
+                        FindEffect(Buffs.Kardia) is null)
+                        return Kardia;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Druochole_LowestPartyMemberExcludingTank) && ActionReady(Druochole) &&
+                        Gauge.Addersgall >= 1 &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Druochole))
+                        return Druochole;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Taurochole_LowestPartyMemberExcludingTank) && ActionReady(Taurochole) &&
+                        Gauge.Addersgall >= 1 &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Taurochole))
+                        return Taurochole;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Rhizomata_LowestPartyMemberExcludingTank) && ActionReady(Rhizomata) &&
+                        Gauge.Addersgall is 0)
+                        return Rhizomata;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Soteria_LowestPartyMemberExcludingTank) && ActionReady(Soteria) &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Soteria))
+                        return Soteria;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Zoe_LowestPartyMemberExcludingTank) && ActionReady(Zoe) &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Zoe))
+                        return Zoe;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Krasis_LowestPartyMemberExcludingTank) && ActionReady(Krasis) &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Krasis))
+                        return Krasis;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Pepsis_LowestPartyMemberExcludingTank) && ActionReady(Pepsis) &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Pepsis) &&
+                        FindEffect(Buffs.EukrasianDiagnosis, healTarget, LocalPlayer?.ObjectId) is not null)
+                        return Pepsis;
+
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Haima_LowestPartyMemberExcludingTank) && ActionReady(Haima) &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Haima))
+                        return Haima;
+                    
+                    if (IsEnabled(CustomComboPreset.SGE_ST_Heal_Diagnosis_LowestPartyMemberExcludingTank) && LevelChecked(Eukrasia) &&
+                        GetTargetHPPercent(healTarget) <= GetOptionValue(Config.SGE_ST_Heal_Diagnosis))
+                        if (FindEffect(Buffs.EukrasianDiagnosis, healTarget, LocalPlayer?.ObjectId) is null)
+                            return Eukrasia;
+                        else
+                            return Diagnosis;
+
+                    GetTarget = true;
+                }
+
+                return actionID;
+            }
+
+            private bool SetTarget()
+            {
+                //Checks for trusts then normal parties. Buddylist does not include player, so +1
+                int maxPartySize = GetPartySlot(5) == null ? 4 : 8;
+                
+                int[] selectedParty = GetPartySlot(5) == null ? fourManParty : eightManParty;
+
+                for (int i = 0; i < selectedParty.Length; i++)
+                {
+                    GameObject? member = GetPartySlot(selectedParty[i]);
+                    if (member == null) continue; //Skip nulls/disconnected people
+                    PartyTargets.Add(member);
+                }
+
+                if (PartyTargets.Count > 0)
+                {
+                    PartyTargets.Sort((x, y) => GetTargetHPPercent(x).CompareTo(GetTargetHPPercent(y)));
+                    TargetObject(PartyTargets[0]);
+                    GetTarget = false;
+                    return true;
+                }
+                return false;
+            }
+        }
+
         internal class SGE_AoE_Heal : CustomCombo
         {
             protected internal override CustomComboPreset Preset { get; } = CustomComboPreset.SGE_AoE_Heal;

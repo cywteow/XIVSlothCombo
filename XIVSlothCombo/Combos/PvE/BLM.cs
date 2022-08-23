@@ -63,6 +63,8 @@ namespace XIVSlothCombo.Combos.PvE
         public static class Levels
         {
             public const byte
+                Blizzard2=  12,
+                Fire2 = 18,
                 Thunder2 = 26,
                 Manafont = 30,
                 Fire3 = 35,
@@ -97,6 +99,7 @@ namespace XIVSlothCombo.Combos.PvE
                 Despair = 800,
                 Blizzard3 = 800,
                 AspectFire = 1600,
+                AspectFire2 = 3000,
                 Fire3 = 2000,
                 MaxMP = 10000;
         }
@@ -191,7 +194,7 @@ namespace XIVSlothCombo.Combos.PvE
 
             protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
             {
-                if (actionID == Flare)
+                if (actionID == Flare || actionID == Blizzard2)
                 {
                     var gauge = GetJobGauge<BLMGauge>();
                     var thunder4Debuff = TargetHasEffect(Debuffs.Thunder4);
@@ -245,7 +248,10 @@ namespace XIVSlothCombo.Combos.PvE
                         {
                             if (gauge.UmbralHearts == 1)
                             {
-                                return Flare;
+                                if (level >= Levels.Flare)
+                                {
+                                    return Flare;
+                                }
                             }
                             return level >= Levels.HighFire2 ? HighFire2 : Fire2;
                         }
@@ -255,7 +261,7 @@ namespace XIVSlothCombo.Combos.PvE
                             {
                                 return Flare;
                             }
-                            else if (currentMP >= MP.AspectFire)
+                            else if (currentMP >= MP.AspectFire2)
                             {
                                 return Fire2;
                             }

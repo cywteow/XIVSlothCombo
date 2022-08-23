@@ -70,6 +70,34 @@ namespace XIVSlothCombo.Combos.PvE
                 Higanbana = 1228;
         }
 
+        public static class Levels
+        {
+            public const byte
+                Jinpu = 4,
+                Enpi = 15,
+                Shifu = 18,
+                Higanbana = 30,
+                Gekko = 30,
+                Iaijutsu = 30,
+                Mangetsu = 35,
+                Kasha = 40,
+                TenkaGoken = 40,
+                Oka = 45,
+                MeikyoShisui = 50,
+                Yukikaze = 50,
+                Setsugekka = 50,
+                Shinten = 52,
+                Gyoten = 54,
+                Kyuten = 62,
+                Ikishoten = 68,
+                Guren = 70,
+                Senei = 72,
+                TsubameGaeshi = 76,
+                Shoha = 80,
+                Shoha2 = 82,
+                OgiNamikiri = 90;
+        }
+
         public static class Config
         {
             public const string

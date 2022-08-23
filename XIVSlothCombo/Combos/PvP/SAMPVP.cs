@@ -66,8 +66,8 @@ namespace XIVSlothCombo.Combos.PvP
                         if (IsEnabled(CustomComboPreset.SAMPvP_BurstMode_Chiten) && IsOffCooldown(Chiten) && InCombat() && PlayerHealthPercentageHp() <= 95)
                             return OriginalHook(Chiten);
 
-                        if (GetCooldownRemainingTime(Soten) < 1 && CanWeave(Yukikaze))
-                            return OriginalHook(Soten);
+                        // if (GetCooldownRemainingTime(Soten) < 1 && CanWeave(Yukikaze))
+                        //     return OriginalHook(Soten);
 
                         if (OriginalHook(MeikyoShisui) == Midare && !this.IsMoving)
                             return OriginalHook(MeikyoShisui);
@@ -78,8 +78,8 @@ namespace XIVSlothCombo.Combos.PvP
                         if (IsOffCooldown(OgiNamikiri) && !this.IsMoving)
                             return OriginalHook(OgiNamikiri);
 
-                        if (GetRemainingCharges(Soten) > sotenCharges && CanWeave(Yukikaze))
-                            return OriginalHook(Soten);
+                        // if (GetRemainingCharges(Soten) > sotenCharges && CanWeave(Yukikaze))
+                        //     return OriginalHook(Soten);
 
                         if (OriginalHook(OgiNamikiri) == Kaeshi)
                             return OriginalHook(OgiNamikiri);

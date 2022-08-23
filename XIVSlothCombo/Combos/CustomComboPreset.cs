@@ -336,7 +336,7 @@ namespace XIVSlothCombo.Combos
         [CustomComboInfo("Thundercloud Option", "Adds Thunder 1/3 when the debuff isn't present or expiring and Thundercloud is available to Simple BLM.", BLM.JobID, 0, "", "")]
         BLM_Thunder = 2006,
 
-        [ReplaceSkill(BLM.Flare)]
+        [ReplaceSkill(BLM.Flare, BLM.Blizzard2)]
         [CustomComboInfo("Simple AoE Feature", "Replaces Flare with a full one button rotation.", BLM.JobID, -1, "", "")]
         BLM_AoE_SimpleMode = 2008,
 
@@ -2272,6 +2272,53 @@ namespace XIVSlothCombo.Combos
             [ParentCombo(SGE_ST_Heal)]
             [CustomComboInfo("Druochole Option", "Applies Druochole.", SGE.JobID, 301, "", "")]
             SGE_ST_Heal_Druochole = 14400,
+            #endregion
+
+        #region Diagnosis Simple Single Target Heal for lowest hp party member excluding tank
+        [ReplaceSkill(SGE.Druochole)]
+        [ConflictingCombos(SGE_Rhizo, SGE_DruoTauro)]
+        [CustomComboInfo("Single Target Heal Feature", "Supports soft-targeting.\nOptions below are in priority order", SGE.JobID, 400, "", "")]
+        SGE_ST_Heal_LowestPartyMemberExcludingTank = 554800,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Apply Kardia Option", "Applies Kardia to your target if it's not applied to anyone else.", SGE.JobID, 404, "", "")]
+            SGE_ST_Heal_Kardia_LowestPartyMemberExcludingTank = 554810,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Eukrasian Diagnosis Option", "Diagnosis becomes Eukrasian Diagnosis if the shield is not applied to the target.", SGE.JobID, 413, "", "")]
+            SGE_ST_Heal_Diagnosis_LowestPartyMemberExcludingTank = 554820,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Soteria Option", "Applies Soteria.", SGE.JobID, 406, "", "")]
+            SGE_ST_Heal_Soteria_LowestPartyMemberExcludingTank = 554830,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Zoe Option", "Applies Zoe.", SGE.JobID, 407, "", "")]
+            SGE_ST_Heal_Zoe_LowestPartyMemberExcludingTank = 554840,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Pepsis Option", "Triggers Pepsis if a shield is present.", SGE.JobID, 409, "", "")]
+            SGE_ST_Heal_Pepsis_LowestPartyMemberExcludingTank = 554850,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Taurochole Option", "Adds Taurochole.", SGE.JobID, 402, "", "")]
+            SGE_ST_Heal_Taurochole_LowestPartyMemberExcludingTank = 554860,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Haima Option", "Applies Haima.", SGE.JobID, 410, "", "")]
+            SGE_ST_Heal_Haima_LowestPartyMemberExcludingTank = 554870,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Rhizomata Option", "Adds Rhizomata when Addersgall is 0.", SGE.JobID, 403, "", "")]
+            SGE_ST_Heal_Rhizomata_LowestPartyMemberExcludingTank = 554880,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Krasis Option", "Applies Krasis.", SGE.JobID, 408, "", "")]
+            SGE_ST_Heal_Krasis_LowestPartyMemberExcludingTank = 554890,
+
+            [ParentCombo(SGE_ST_Heal_LowestPartyMemberExcludingTank)]
+            [CustomComboInfo("Druochole Option", "Applies Druochole.", SGE.JobID, 401, "", "")]
+            SGE_ST_Heal_Druochole_LowestPartyMemberExcludingTank = 554900,
             #endregion
 
         #region Sage Simple AoE Heal
