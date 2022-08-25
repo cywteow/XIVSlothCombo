@@ -400,10 +400,6 @@ namespace XIVSlothCombo.Combos.PvE
 
             protected internal MudraCasting mudraState = new MudraCasting();
 
-            protected internal MudraCasting mudraState = new MudraCasting();
-
-            protected internal NINOpenerLogic openerLogic = new NINOpenerLogic();
-
             protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
             {
                 if (actionID == DeathBlossom)
@@ -590,14 +586,12 @@ namespace XIVSlothCombo.Combos.PvE
                         if (WasLastAction(TCJRaiton)) return OriginalHook(Jin);
                         return OriginalHook(Ten);
                     }
-<<<<<<< HEAD
-
-                    if (level >= Levels.ThrowingDaggers && !InMeleeRange() && noMudra)
+                    if (ThrowingDaggers.LevelChecked() && !InMeleeRange() && !inMudraState)
                         return ThrowingDaggers;
 
                     if (mudraState.CurrentMudra != MudraCasting.MudraState.None)
                     {
-                        if (mudraState.ContinueCurrentMudra(ref actionID) && noMudra)
+                        if (mudraState.ContinueCurrentMudra(ref actionID))
                             return actionID;
                     }
 
@@ -617,13 +611,13 @@ namespace XIVSlothCombo.Combos.PvE
 
                     if (!inTrickBurstSaveWindow)
                     {
-                        if (mudraState.CastRaiton(ref actionID) && noMudra)
+                        if (mudraState.CastRaiton(ref actionID))
                             return actionID;
                     }
 
                     if (canWeave && !inMudraState)
                     {
-                        if (Bunshin.LevelChecked() && IsOffCooldown(Bunshin) && gauge.Ninki >= 50 && noMudra)
+                        if (Bunshin.LevelChecked() && IsOffCooldown(Bunshin) && gauge.Ninki >= 50)
                             return OriginalHook(Bunshin);
 
                         if (HasEffect(Buffs.Suiton) && IsOffCooldown(TrickAttack))
@@ -634,13 +628,10 @@ namespace XIVSlothCombo.Combos.PvE
 
                         if (!inTrickBurstSaveWindow)
                         {
-                        if (noMudra)
-                        {
-                                if (HasEffect(Buffs.Suiton) && gauge.Ninki <= 50 && IsOffCooldown(Meisui) && Meisui.LevelChecked())
+                            if (HasEffect(Buffs.Suiton) && gauge.Ninki <= 50 && IsOffCooldown(Meisui) && Meisui.LevelChecked())
                                 return OriginalHook(Meisui);
 
-                            if (IsOffCooldown(Mug))
-                            if (Mug.LevelChecked())
+                            if (IsOffCooldown(Mug) && Mug.LevelChecked())
                                 return OriginalHook(Mug);
 
                             if (gauge.Ninki >= 85 && Bhavacakra.LevelChecked())
@@ -649,28 +640,20 @@ namespace XIVSlothCombo.Combos.PvE
                             if (IsOffCooldown(OriginalHook(Assassinate)) && Assassinate.LevelChecked())
                                 return OriginalHook(Assassinate);
 
-                                if (IsOffCooldown(TenChiJin) && TenChiJin.LevelChecked())
+                            if (IsOffCooldown(TenChiJin) && TenChiJin.LevelChecked())
                                 return OriginalHook(TenChiJin);
 
                             if (IsOffCooldown(Kassatsu) && Kassatsu.LevelChecked())
                                 return OriginalHook(Kassatsu);
                         }
-                            else if (level >= Levels.Hellfrog)
-                                return Hellfrog;
-                        }  
                     }
                     else
                     {
                         if (HasEffect(Buffs.RaijuReady))
                             return OriginalHook(FleetingRaiju);
 
-                        if (HasEffect(Buffs.PhantomReady) && noMudra)
-                        {
-                            if (PhantomKamaitachi.LevelChecked())
-                                return OriginalHook(PhantomKamaitachi);
-                            else if (level >= Levels.Hellfrog)
-                                return Hellfrog;
-                        }
+                        if (HasEffect(Buffs.PhantomReady) && PhantomKamaitachi.LevelChecked())
+                            return OriginalHook(PhantomKamaitachi);
                     }
 
                     if (comboTime > 1f)
@@ -704,7 +687,6 @@ namespace XIVSlothCombo.Combos.PvE
             {
                 if (actionID == DeathBlossom)
                 {
-                    var canWeave = CanWeave(actionID);
                     var dotonBuff = FindEffect(Buffs.Doton);
                     var gauge = GetJobGauge<NINGauge>();
                     var canWeave = CanWeave(GustSlash);
@@ -904,10 +886,10 @@ namespace XIVSlothCombo.Combos.PvE
                 if (actionID == TenChiJin)
                 {
 
-                    if (level >= Levels.Meisui && HasEffect(Buffs.Suiton))
+                    if (Meisui.LevelChecked() && HasEffect(Buffs.Suiton))
                         return Meisui;
 
-                    if (HasEffect(Buffs.TenChiJin))
+                    if (HasEffect(Buffs.TenChiJin) && IsEnabled(CustomComboPreset.NIN_TCJ))
                     {
                         var tcjTimer = FindEffectAny(Buffs.TenChiJin).RemainingTime;
 
